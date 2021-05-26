@@ -15,3 +15,15 @@ def get_players(game_list):
                 if game[key] not in player_list:
                     player_list.append(game[key])
     return(player_list)
+
+
+def who_beat_who(game_list):
+    game_dict = {}
+    for name in get_players(game_list):
+        game_dict[name] = []
+    for game in game_list:
+        game_dict[game['winner']].append(game['loser'])
+    return(game_dict)
+
+
+print(who_beat_who(game_list))
