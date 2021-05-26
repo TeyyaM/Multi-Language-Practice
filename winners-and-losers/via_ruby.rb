@@ -12,7 +12,7 @@ def get_players(game_arr)
   game_arr.each do |game|
     game.each do |key, name|
       # check specifically for 'winner' and 'loser' in case more hashes are 
-      # added to the gameArr later as future-proofing
+      # added to the game_arr later as future-proofing
       if key === :winner || key === :loser
         player_arr.push(name) unless player_arr.include?(name)
       end
