@@ -1,4 +1,4 @@
-gameArr = [
+const gameArr = [
   { winner: 'Alice', loser: 'Bob', losersScore: 2 },
   { winner: 'Alice', loser: 'Dean', losersScore: 3 },
   { winner: 'Elise', loser: 'Bob', losersScore: 1 },
