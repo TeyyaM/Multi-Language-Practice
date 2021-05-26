@@ -14,12 +14,12 @@ const gameArrTs = [
   { winner: 'Carol', loser: 'Dean', losersScore: 3 }
 ];
 
-function getPlayersTs(gameArr: IGame[]) {
+function getPlayersTs(gameArrTs: IGame[]) {
   const playerArr = [];
-  for (const game of gameArr) {
+  for (const game of gameArrTs) {
     for (const [key, name] of Object.entries(game)) {
       // check specifically for 'winner' and 'loser' in case more keys are 
-      // added to the gameArr later as future-proofing
+      // added to the gameArrTs later as future-proofing
       if ((key === 'winner' || key === 'loser') && !playerArr.includes(name)) {
         playerArr.push(name);
       }
@@ -28,15 +28,15 @@ function getPlayersTs(gameArr: IGame[]) {
   return playerArr;
 };
 
-function whoBeatWhoTs(gameArr: IGame[]) {
+function whoBeatWhoTs(gameArrTs: IGame[]) {
   const newObj = {};
-  for (const player of getPlayers(gameArr)) {
+  for (const player of getPlayersTs(gameArrTs)) {
     newObj[player] = [];
   }
-  for (const game of gameArr) {
+  for (const game of gameArrTs) {
     newObj[game.winner].push(game.loser);
   }
   return newObj;
 };
 
-console.log(whoBeatWho(gameArr));
+console.log(whoBeatWhoTs(gameArrTs));
