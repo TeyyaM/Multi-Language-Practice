@@ -1,3 +1,4 @@
+from pprint import pprint
 game_list = [
     {'winner': 'Alice', 'loser': 'Bob', 'losers_score': 2},
     {'winner': 'Alice', 'loser': 'Dean', 'losers_score': 3},
@@ -26,4 +27,4 @@ def who_beat_who(game_list):
     return(game_dict)
 
 
-print(who_beat_who(game_list))
+pprint(who_beat_who(game_list))
