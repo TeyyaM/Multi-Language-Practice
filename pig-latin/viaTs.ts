@@ -6,9 +6,7 @@ let stringTs = '';
 // go through each word individually
 for (let i = 0; i < userInputTs.length; i++) {
   // turn the word into pig latin
-  for (let j = 1; j < userInputTs[i].length; j++) {
-    stringTs += userInputTs[i].charAt(j);
-  }
+  string += userInput[i].substr(1);
   stringTs += userInputTs[i].charAt(0);
   stringTs += 'ay';
   // add a space before the next word, if there is one
